@@ -1,0 +1,35 @@
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+class Student {
+	int sno = 1000; 
+	String name = "홍길동"; 
+	String gender = "남자"; 
+	int age = 43;
+	
+}
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 실습1. 변수 학생 1명의 정보를 출력하기(h1태그등 사용
+		 번호 : 1000
+		 이름 : 홍길동
+		 성별 : 남자
+		 나이 : 43
+		 
+		 실습2. ArrayList<String>를 이용해서 학생 1명만 출력
+		 번호 : 2000
+		 이름 : 소향
+		 성별 : 여자
+		 나이 : 44 
+	 -->
+	 <h1>번호 <%= sno %></h1>
+	 <h1>이름</h1>
+	 <h1>성별</h1>
+	 <h1>나이</h1>
+</body>
+</html>

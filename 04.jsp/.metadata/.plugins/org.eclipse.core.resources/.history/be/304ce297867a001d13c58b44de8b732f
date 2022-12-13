@@ -1,0 +1,38 @@
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!-- 
+	JSP의 영역(scope)
+	
+	웹애플리케이션은 4가지영역으로 구분된다.
+	
+	1. page
+	2. request
+	3. session
+	4. application
+	
+	JSP기본객체의 메서드
+	
+	1. setAttribute(String name, Object value)
+	2. getAttribute(String name)
+	3. removeAttribute(String name)
+	4. getAttributeNames()
+	
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+	request.setCharacterEncoding("utf-8");
+	String id = request.getParameter("id");
+	String pw = request.getParameter("pw");
+	
+	out.print("<h3>사용자 아이디 = " + id + "</>");
+	out.print("<h3>비밀번호 = " + pw + "</>");
+	out.print("<h3></>");
+	out.print("<h3></>");
+%>	
+</body>
+</html>

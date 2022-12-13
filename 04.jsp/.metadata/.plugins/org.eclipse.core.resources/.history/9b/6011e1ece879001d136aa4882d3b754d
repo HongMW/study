@@ -1,0 +1,36 @@
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!-- 
+	2. pageContext 기본객체
+	
+		1) jsp파일 하나당 한 개씩 존재하는 기본객체
+		
+			a. ㄱ;번객체구하기
+			b. 속성처리하기
+			c. 페이지흐름 제어하기
+			d. 에러데이터 구하기
+		
+		2) 관련메서드
+		
+			a. getRequest()			: request 객체를 구하기
+			b. getResponse)			: response 객체를 구하기
+			c. getSession()			: session 객체를 구하기
+			d. getServlet()			: application 객체를 구하기
+			e. getServletConfig()	: config 객체 구하기
+			f. getOut()				: out 객체 구하기
+			g. getPage()			: page 객체 구하기
+			h. getExcpetion()		: exception 객체 구하기
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3><%= request.toStriong() %> = <%= pageContext.getRequest() %></h3>
+	<h3><%= response.toStriong() %> = <%= pageContext.getResponse() %></h3>
+	<h3><%= session %> = <%= pageContext.getSession() %></h3>
+	<h3><%= application %> = <%= pageContext.Servlet() %></h3>
+	<hr />
+</body>
+</html>
