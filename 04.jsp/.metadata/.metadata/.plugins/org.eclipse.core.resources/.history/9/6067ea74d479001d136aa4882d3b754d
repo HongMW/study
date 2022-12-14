@@ -1,0 +1,22 @@
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!-- 
+	A. JSP처리과정
+	B. 출력버퍼와 응답
+	C. 플러쉬(Flush)
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+		for(int i=0;i<1000;i++) {
+	%>
+		1234567890
+	<%
+		}
+	%>
+</body>
+</html>
