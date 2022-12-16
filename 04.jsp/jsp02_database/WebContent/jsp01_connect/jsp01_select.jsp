@@ -36,7 +36,7 @@
 				
 				if(rs.next()) {
 %>
-					<table class="table tabl-hover" border="1">
+					<table class="table table-hover" border="1">
 						<tr>
 							<td>아이디</td>
 							<td><%= id %></td>
