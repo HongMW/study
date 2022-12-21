@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>미디어쿼리기본(순서주의)</title>
+   <style>
+  body{background-color:gray;}
+	#logo img{width:100%;margin-top:150px;}
+
+			
+			@media all and (min-width:1024px) {
+				body{background:yellow;}
+			}
+			@media all and (max-width:559px) {
+				body{background:skyblue;}
+			}
+			@media all and (min-width:600px) and (max-width:1023px) {/*600이상이고 1023이하 */
+				body{background:green;}
+			}
+	
+  </style>
+</head>
+<body>
+  <div id="logo">
+		<img src="images/logo.png" alt="logo">
+	</div></body></html>

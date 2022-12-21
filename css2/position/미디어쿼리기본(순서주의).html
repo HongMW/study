@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>미디어쿼리기본(순서주의)</title>
+   <style>
+  body{background-color:gray;}
+	#logo img{width:100%;margin-top:150px;}
+
+	@media screen and (max-width:320px) {/* 320px 이하이면 */
+		body {background-color:orange;}
+	}
+	
+	@media screen and (max-width: 960px) {/*960px 이하이면 */
+		body { background-color:green; }
+	}
+
+	@media screen and (max-width:500px) {/* 500px 이하이면 */
+		body {background-color:yellow; }
+	}
+
+	
+  </style>
+</head>
+<body>
+  <div id="logo">
+		<img src="images/logo.png" alt="logo">
+	</div></body></html>

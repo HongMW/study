@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+/*	ul : 가로 사이즈 450px, 높이는 150px,  좌우가운데 정렬 (margin:0 auto;)
+	 a: 안쪽여백을 50px, 공간을 가진다(사이즈)
+*/
+	*{margin:0;padding:0;}
+	nav { width:100%; height:150px; float:left; border:1px solid black;}
+	ul {width:520px;height:60px;margin:0 auto;border:1px solid red;list-style:none;
+	}
+	a {display:block;float:left;padding:20px 30px;border:1px solid blue;
+		color:white;text-decoration:none;font-weight:bold;background:black;}
+	a:visited , a:focus{color:black;text-decoration:none;}
+	a:hover, a:active {color:gray;}
+	a:first-child{ border-top-left-radius:1em;border-bottom-left-radius:1em;}
+	a:last-child{border-top-right-radius: 1em;border-bottom-right-radius: 1em;}
+  </style>
+ </head>
+ <body>
+  <nav>
+	<ul>
+		<li><a href="#">카카오</a></li>
+		<li><a href="#">뉴스</a></li>
+		<li><a href="#">기술과서비스</a></li>
+		<li><a href="#">약속과책임</a></li>
+	</ul>
+  </nav>
+ </body>
+</html>

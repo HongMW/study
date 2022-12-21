@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ <style>
+	.wrap {width: 80%; margin: 0 auto;}
+    table {width:100%; border-collapse:collapse; border-spacing:0;}
+    th, td {padding:10px; border:1px solid #ccc;}
+    th {width:80px; background: #e1e1e1;}
+	  @media screen and (max-width:760px) {
+      table, thead, tbody, th, td, tr {display: block; box-sizing:border-box;}
+      table {border-top:2px solid #aaa; border-left:1px solid #ccc;}
+      tr {overflow:hidden;}
+      th {width:80px; height:100%;float:left; border: 0; border-right:1px solid #ccc;border-bottom:1px solid #ccc;}
+	  td{width:calc(100% - 80px);height:100%;float:left; border: 0; border-right:1px solid #ccc;border-bottom:1px solid #ccc;}
+	  tr:last-child {height:100px;}
+	 }
+
+ </style>
+ </head>
+<body>
+  <div class="wrap">
+  <h1>반응형 테이블</h1>
+  <table>
+    <tbody>
+      <tr>
+        <th>이름</th>
+        <td>홍길동</td>
+        <th>나이</th>
+        <td>23</td>
+      </tr>
+      <tr>
+        <th>성별</th>
+        <td>남자</td>
+        <th>지역</th>
+        <td>양천구</td>
+      </tr>
+      <tr>
+        <th>취미</th>
+        <td colspan="3">의적활동</td>
+      </tr>
+      <tr>
+        <th>한마디</th>
+        <td colspan="3">
+          호부호형을 하고싶습니다.<br/>
+          동에 번쩍 서에 번쩍 어디든 나타납니다.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</body>
+</html>

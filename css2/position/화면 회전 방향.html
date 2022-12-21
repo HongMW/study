@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>화면 회전 방향</title>
+   <style>
+  body{background-color:gray;}
+	#logo img{width:100%;margin-top:150px;}
+
+			
+	@media screen and (orientation:landscape) {/*단말기의 가로방향 */
+		body {background-color:orange;}
+	}
+	
+	@media screen and (orientation:portrait) {/*단말기의 세로방향 */
+		body {background-color:yellow;}
+	}
+			
+	
+  </style>
+</head>
+<body>
+  <div id="logo">
+		<img src="images/logo.png" alt="logo">
+	</div></body></html>

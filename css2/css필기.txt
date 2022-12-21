@@ -1,0 +1,73 @@
+a[href ^= "https://"] {font-style:italic;}
+지정한 문자로 시작하면~ 적용해라
+
+a[href $= "xls"] {padding-right:25px;}
+지정한 문자로 끝나면 ~ 적용해라
+
+li[title *="2022"] {font-weight:700'}
+지정한 문자를 포함하면 ~ 적용해라
+
+<li title="last update:2022-11">
+
+가상클래스
+a:link - 사용자가 아직 방문을 하지 않은 링크(a)
+visited - 한번 이상 방문한 링크에 대한 스타일
+active - 링크를 클릭했을때의 스타일
+hover - 마우스를 포인터에 올려 놓았을 때 
+focus - 해당 요소에 초점이 맞춰졌을 때
+
+font-family: KakaoBig,Apple SD Gothic Neo,Malgun Gothic,맑은 고딕,sans-serif;
+
+
+h1:not([class="show"]) {display: none;}
+h1태그중 클래스가 show인것만 빼고 보이지 말아라.
+
+li:not(:last-child){color :green;}
+li태그중 마지막 li만 빼고 글자색 적용.
+
+---------------------------------------------
+*.eot(익스8이하버전)
+*.woff(익스9이상, 크롬, 파이어폭스)
+웹폰트로 변환하여 사용하면 된다.
+
+기본형
+@font-face {
+		font-family:글꼴 이름;
+		src:url(글꼴 파일 경로) format(파일 유형);
+}
+
+sans-serif : 고딕, 돋움
+serif : 궁서, 명조체 
+
+
+# font-size 속성 - 글자 크기 조절하기
+브라우저의 기본크기는 12pt, 16px, 1em, 100% 같이 표시된다.
+xx-small < x-small < small < medium(기본값) < large < x-large < xx-large
+각 단계 사이는 1.2배로 커지거나 작어진다. 16px의 large 하면 19.2px
+
+
+# font-weight 속성 - 글자 굵기 지정하기
+normal - 일반
+bold - 진하게
+lighter- 원래 굵기보다 연하게 표시
+bolder - 원래 굵기보다 진하게 표시
+400~900 사이 수치 - 400원 보통, 700은 진하게를 기준으로 숫자를 지정
+
+
+#color표현 방법
+p { color : #000000; }
+p { color : rgb(0, 255, 0); }
+p { color : hsl(320, 100%, 75%); }
+p { color : red;}
+
+기본값 : hsla(hue, saturation, lightness, alpha);
+
+text-decoration:underline;
+
+
+
+
+
+
+
+

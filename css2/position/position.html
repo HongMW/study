@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>position</title>
+  <style>
+	*{margin:0;padding:0;}
+	body{background-color:gainsboro;}
+
+    #box{            
+            position: absolute;/*부모를기준으로*/
+            left: 50px;
+            top: 50px;
+            background: #5f6261;
+            width: 800px;
+            height: 400px;
+        }
+	.sBox{width:100px;height:100px;float:left;
+			background-color:white;color:#004F5e;
+			text-align:center;font-size:20px;font-weight:bold;}
+	#sBox_1{position:relative;/* 나의위치를 기준으로 */
+			top:100px;left:0;
+			background:yellow;}
+	#sBox_2{position:relative;/* 나의위치를 기준으로 */
+			top:100px;left:0;
+			background:blue;}
+	#sBox_3{position:relative;/* 나의위치를 기준으로 */
+			top:100px;left:0;
+			background:green;}
+	#sBox_4{position:relative;/* 나의위치를 기준으로 */
+			top:100px;left:0;
+			background:orange;}
+	#sBox_5{position:relative;
+			top:0;left:-200px;
+			background:purple;}
+	#sBox_6{position:relative;
+			top:200px;left:-300px;
+			background:skyblue;}
+			
+
+  </style>
+ </head>
+ <body>
+      <div id="box">
+        <div class="sBox" id="sBox_1">1</div>
+        <div class="sBox" id="sBox_2">2</div>
+		<div class="sBox" id="sBox_3">3</div>
+		<div class="sBox" id="sBox_4">4</div>
+		<div class="sBox" id="sBox_5">5</div>
+		<div class="sBox" id="sBox_6">6</div>
+    </div>
+ </body>
+</html>
