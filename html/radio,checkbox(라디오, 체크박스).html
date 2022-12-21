@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {background-color:#fff;}
+        form fieldset{margin-bottom:25px;}/*fieldset은 form태그에서부터 시작되는 것(하위),margin은 top, left, right. bottom이 있다, 영역을 표시할때 기본값은 사각형,콘텐츠의 바깥영역을 margin (공간을 주는 것)*/
+        form legend{font-size:15px;font-weight:600;}/*form 하위에 모든 것(), font-weight 기본 400*//*{}안에 적용되게 하는것*/
+        form ul li/*form 태그 안에 ul태그 안에 li태그에 적용되라*/{list-style:none;/*앞에.을 없애라*/margin:15px 0;/*marin:15px(상하) 0(좌우);*/font-size:14px;}
+    </style><!--body의 현재값은 의미 없는 것-->
+</head>
+<body>
+    <form>
+        <fieldset id="register">
+        <legend>수강 과목을 선택하세요 <small>(1과목 선택 가능)</small></legend><!--small태그는 작게 표시-->
+        <ul>
+            <li><label><input type="radio" name="spk" value="low" checked>영어 회화(초급)</label></li><!--radio= 그룹당 1개 선택 가능, 실무에서 컴퓨터로 시험볼때 radio로, 성별 체크, radio에는 name을 줘야한다-->
+            <li><label><input type="radio" name="spk" value="middle">영어 회화(중급)</label></li><!--지금은 label 사용하는게 맞다-->
+            <li><label><input type="radio" name="spk" value="high">영어 회화(고급)</label></li><!-- spk에 숫자를 주면 따로 선택된다-->
+            <li><label><input type="radio" name="spk1" value="low">영어 회화(초급)</label></li><!--실제 데이터 전송되는 것은 value이다-->
+            <li><label><input type="radio" name="spk1" value="middle">영어 회화(중급)</label></li><!--checked 안써도 되지만 쓴느 것을 권장-->
+            <li><label><input type="radio" name="spk1" value="high">영어 회화(고급)</label></li>
+        </ul>
+        </fieldset>
+        <fieldset>
+            <legend> 관심분야는?<small>(다수 선택 가능)</small></legend>
+            <ul>
+                <li><label><input type="checkbox" name="pre" value="grammar">문법</label></li><!--3개이상 선택 못하게 만드는 것은 script다-->
+                <li><label><input type="checkbox" name="pre" value="voca">어휘</lable></li><!--checkbox도 value가 중요-->
+                <li><label><input type="checkbox" name="pre" value="speaking">회화</lable></li>
+                <li><label><input type="checkbox" name="pre" value="listening">리스닝</lable></li>
+                <li><label><input type="checkbox" name="pre" value="news">뉴스 청취</lable></li>
+                <li><label><input type="checkbox" name="pre" value="reading">독해</lable></li>
+            </ul>
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>버튼 태그를 이용한 css</title>
+<style>
+button{
+	display:block;
+	background-color:#CCCCCC;
+	border:1px solid #dedede;
+	cursor:pointer;/*마우스 커서 모양이 손가락 모양으로 변환시켜줄때 언어*/
+	padding:5px 10px 6px 7px;	/*안쪽 여백, 위 오른쪽 아래 왼쪽*/
+}
+button img{
+	border:0;
+	padding:0;
+	width:16px;
+	height:16px;	
+}
+button:hover{
+	background-color:#e6efc2;
+	border:1px solid #c6d880;
+	color:#529215;
+}
+</style>
+</head>
+<body>
+<form>
+	<button type="submit" class="subm">
+		<img src="images/tick.png" alt=""> 전송하기
+	</button>
+	<input type="submit" value="전송하기"><!--input보다 button이 이미지를 넣어서 꾸밀때 사용하기 편함(활용도가 높음)-->
+</form></body></html>

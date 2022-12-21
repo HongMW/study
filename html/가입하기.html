@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        form fieldset { margin: 10px 0;/*상하, 좌우(여백제거 먼저 실무 필수)*/}
+        form legend { font-size:18px;color:#06f;;font-weight:600; }
+        form label.reg/*label태그중 클래스 명이 reg인것*/ { font-size:14px;
+            width:120px;
+            float:left;/*공간을 가지고 왼쪽으로 배치해라하는 뜻, 공간을 가진다는 것은 size가 있어야 한다, float를 사용하려면 width가 무조건 있어야 함*/ }
+            /*label .reg=label태그 하위에 있는 클래스명이 reg, 띄어쓰기 하나에 완전히 달라진다*/
+        form label em{ font-size:15px;color:red;font-weight:800; }
+        form ul li{ list-style:none;margin: 10px 0;}
+        form fieldset.sendform {text-align:center;}
+    </style>
+</head>
+<body>
+    <form><!--많이 중요-->
+        <fieldset class="login">
+            <legend>로그인</legend>
+            <label for="user_id">아이디 </label>
+            <input type="text" id="user_id" size="10" autofocus><!--10개를 쓸 수 있는 공간이다-->
+            <label for="user_pw">비밀번호 </label>
+            <input type="password" id="user_pw" size="10">
+            <input type="submit" value="로그인">
+        </fieldset>
+        <fieldset class="register">
+            <legend>가입하기</legend>
+            <ul>
+                <li><label class="reg" for="new_id">아이디 <em>*</em></label><!--em은 강조하다(기울림으로, 중요한 의미),단순한 구별용도<b>-->
+                    <input type="text" id="new_id" size="20" autocomplete="on" required></li><!--autocomplete 자동완성/ required 무조건 작성-->
+                <li><label class="reg" for="new_pw1">비밀번호 <em>*</em></label>
+                    <input type="password" id="new_pw1" size="20" required></li>
+                <li><label class="reg" for="new_pw2">비밀번호 확인 <em>*</em></label>
+                    <input type="password" id="new_pw2" size="20" required></li>
+                <li><label class="reg" for="user_name">이름 <em>*</em></label>
+                    <input type="text" id="user_name" size="20" required></li>
+                <li><label class="reg" for="user_email">메일주소 <em>*</em></label>
+                    <input type="email" id="user_email" size="20" required></li>
+                <li><label class="reg" for="user_tel">전화번호 </label>
+                    <input type="tel" id="user_tel" size="20" required></li><!--tel새로나온것 html5에/ tel 전화번호는 이걸로 쓸 수 있도록 한다-->
+            </ul>
+        </fieldset>
+        <fieldset class="sendform">
+            <input type="submit" value="가입하기"><!--나란히 나오면 inline, inline text가 아니어도 text로 적용-->
+            <input type="reset" value="다시쓰기">
+        </fieldset>
+    </form>
+</body>
+</html>

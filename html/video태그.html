@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>video 태그</title>
+</head>
+<body>
+    <video src="images/gate.mp4" width="450" height="300" preload controls loop autoplay><!-- preload 미리 읽어들임(바로 재생/돈이 나감/이제 잘 사용 안함)/ controls 컨트롤러 보여주기/loop 무한반복/autoplay 자동재생-->
+        <source src="images/gate.mp4"><!--사파리,크롬,윈도우7/8-->
+        <source src="images/gate.ogv"><!--파이어폭스,오페라-->
+        <source src="images/gate.webm"><!--크롬-->
+    </video><!-- html5에서 지원/ mp4 화질 좋음 유료.../ogv 무료 화질 않좋음/webm 무료 화질이 뛰어남(마이크로소프트에서 반대 통합 안됬음) 모든 영상 파일 인코딩 할줄 알아야 함-->
+</body><!-- 카카오 인코더 무료 파일변환 가능-->
+</html>

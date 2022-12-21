@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <style>
+        *{margin:0;padding:0;}
+        body{width:100%;height:100%;margin:0 auto;background:#f5f6f7;}
+        form{height:997px;}
+        fieldset{height:997px;border:none;display:flex;flex-direction:column;align-items:center;}
+        form ul li{width:460px;list-style:none;margin-top:30px;}
+        h1{height:44px;}
+        h1 a{width:240px;height:44px;background:url(./images/m_naver_logo_20191126.png) no-repeat center top;display:block;margin:0 auto;background-size:240px auto;color:transparent;font-size:0;}
+        fieldset{display:flex;flex-direction:column;padding:10px;}
+        ul li:not(.ust){width:460px;display:flex;flex-direction:column;}
+        label{font-size:14px;font-weight:700;margin:10px;}
+        #new_id{text-align:left;}
+        span:not(.new_ide, .ymd) {height:40px;padding:10px;border:1px solid #dadada;display:flex;background:white;}
+        .new_ide{width:82px;height:18px;font-size:15px;color:#8e8e8e;}
+        input{width:70%;height:20px;padding:10px;display:block;}
+        .int{border:none;border-radius:0;}
+        .ymd{width:460px;height:75px;display:flex;;}
+        .yy, .mm, .dd{width:146px;}
+        .yy, .mm{margin-right:10px;}
+        select{width:100%;border:none;}
+        .uts{width:460px;height:210px;}
+        .ut1{width:435px;height:51px;border:1px solid #dadada;margin:5px 0;}
+        .ut2{width:435px;height:51px;margin-top:5px;display: block;}
+        #utel1{width:320px;height:50px;display:block;float:left;border:1px solid #dadada;margin:5px 0 10px;}
+        input[type="submit"]{background-color:#03c75a;}
+        #sm1{width:105px;height:71px;color:white;font-size:15px;font-weight:bold;padding:17px 0 17px;float:left;margin:5px;display:block;}
+        #sm2{width:100%;height:53px;color:white;font-size:18px;font-weight:700;position:relative;}
+    </style>
+</head>
+<body>
+    <h1><a href="https://www.naver.com/" class="h_logo">NAVER</a></h1>
+    <form>
+        <fieldset>
+        <ul>
+            <li><label class="reg" for="new_id">아이디 </label>
+            <span class="new_id1">
+            <input type="text" id="new_id" class="int" value=""  size="20" autocomplete="on" autofocus required><span class="new_ide">@naver.com</span></span></li>
+            <li><label class="reg" for="new_pw1">비밀번호 </label><span class="pw">
+            <input type="password" id="new_pw1" class="int" size="20" required></span></li>
+            <li><label class="reg" for="new_pw2">비밀번호 확인 </label><span class="pw">
+            <input type="password" id="new_pw2" class="int" size="20" required></span></li>
+            <li><label class="reg" for="user_name">이름 </label><span class="name">
+            <input type="text" id="user_name" class="int" size="20" required></span></li>
+            <li class="ymd"><label class="reg" for="yy.mm.dd" >생년월일 </label><span class="ymd">
+            <span class="yy"><input type="text" id="yy" class="int" placeholder="년(4자)" maxlength="4" required></span>
+            <span class="mm"><select id="mm">
+                <option value="mm"selected>월</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select></span>
+            <span class="dd"><input type="text" id="dd" class="int" placeholder="일" maxlength="2" required></span></span></li>
+            <li><label class="reg" for="gender">성별</label><span class="gen">
+            <select id="gender">
+                <option value="gender"selected>성별</option>
+                <option value="man">남</option>
+                <option value="woman">여</option>
+            </select></span></li>
+            <li><label class="reg" for="user_email">본인 확인 이메일(선택)</label><span class="ue">
+            <input type="email" id="user_email" class="int" placeholder="선택입력" required></span></li>
+            <li class="ust"><label class="reg" for="utel">휴대전화</label><span class="ut1">
+            <select id="utel">
+                <option value="kor">대한민국+82</option>
+                <option value="usa">미국+1</option>
+                <option value="Swiss">스위스+41</option>
+            </select></span>
+            <input type="text" id="utel1" class="int" placeholder="전화번호 입력" required>
+            <input type="submit" id="sm1" class="int" value="인증번호 받기">
+            <span class="ut2"><input type="text" class="int" id="utel" placeholder="인증번호 입력하세요" required></span>
+            <li><input type="submit" id="sm2" class="int" value="가입하기"></li>
+        </ul>
+        </fieldset>
+    </form>
+</body>
+</html>
