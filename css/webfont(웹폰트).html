@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>웹 폰트</title>
+    <style>
+        body {background-color: #09280b;}
+        @font-face{/*@나오면 css3 웹서버에 올리기 위한 기본 공식*/
+            font-family:'myBand';/*폰트페밀리의 이름은 내가 알아서 지정해 주면 된다*/
+            src: url('font/Band.eot');
+            src: url('font/Band.ttf') format('truetype');
+            src: url('font/Band.woff') format('woff');/*경로설정*/
+        }
+        h1{font-family:myBand;font-size:3em;/*em = 배수, 대문자 기준. 반응형으로 만들기 위한것*/color:yellow;}
+        p{font-family:myBand;color:white;}
+    </style>
+</head>
+<body>
+    <h1>HTML5 AND CSS3</h1>
+    <p>HTML5 AND CSS3</p>
+</body>
+</html>

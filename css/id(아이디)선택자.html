@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>우리펜선</title>
+    <style>
+        *{margin:0;padding:0;}
+        #title {
+            float:left; /*공간을 가지고 왼쪽에 배치, flex로 움직이는것을 float로도 적용할 수 있어야함, 테트리스로 생각, left를 상대적으로 많이 씀*/
+            margin-left:10px;
+            width:200px ;
+            height:110px;
+            background-color:orange;
+            border: 1px solid black;/*테두리가 1px solid=실선, solid보다 black 먼저 써도 됨*/
+            text-align:center;
+        }
+        #pic1{
+            float:left;
+            margin-left:10px;
+            width:200px;
+            height:110px;
+        }
+        #pic2{
+            /*clear:both;새로운 줄로부터 배치되라, 밑으로 내릴 때 사용*/
+            float:left;
+            margin-left:10px;
+            width:200px;
+            height: 110px;
+        }
+        #pic3{
+            clear:both;
+            float:left;
+            margin-left:10px;
+            margin-top:20px;
+            width:200px;
+            height:120px;
+        }
+    </style>
+</head>
+<body>
+    <div id="contents">
+        <div id="title"><!--div로 처리해서 줄바꿈으로 표시 flex아니면 이것으로 씀-->
+            <h2>우리펜션</h2>
+        </div>
+        <div id="pic1">
+            <img src="images/1.jpg">
+        </div>
+        <div id="pic2">
+            <img src="images/2.jpg">
+        </div>
+        <div id="pic3">
+            <img src="images/3.jpg">
+        </div>
+    </div>
+</body>
+</html>

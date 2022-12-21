@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>translate가운데정렬</title>
+    <style>
+        *{margin:0;height:0;}
+        #wapper{width:200px;height:200px;
+            position:absolute;left:50%;top:50%;
+            transform:translate(-50%,-50%);/*x축,y축*/
+            background:green;
+        }
+        #center{width:100px;height:100px;
+            background:orange;
+            transform:translate(50%,50%);/*translate나의 위치를 기준*/
+            -webkit-transform:translate(50%,50%);
+            -ms-transform:translate(50%,50%);
+            -o-transform:translate(50%,50%);
+            -moz-transform:translate(50%,50%);
+        }
+    </style>
+</head>
+<body>
+    <div id="wapper">
+        <div id="center"></div>
+    </div>
+</body>
+</html>

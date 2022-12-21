@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>translate</title>
+    <style>
+        div {
+            width:100px;
+            height:100px;
+            margin:50px auto;/*상하만 작용*/
+            background-color:#000;
+            transition:all 1s ease;
+            cursor:pointer;
+        }
+        .myClass1:hover{
+            transform:translateX(50px);/*공간의 좌우*/
+            background-color:#f00;
+        }
+        .myClass2:hover{
+            transform:translateY(50px);/*공간의 상하*/
+        }
+        .myClass3:hover{
+            transform:rotate(45deg);
+        }
+        .myClass4:hover{
+            transform:scaley(1.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="myClass1"></div>
+    <div class="myClass2"></div>
+    <div class="myClass3"></div>
+    <div class="myClass4"></div>
+</body>
+</html>

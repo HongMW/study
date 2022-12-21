@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카카오 연습</title>
+    <style>
+        *{margin:0;padding:0;}
+        body{width:100%;height:7000px;}
+        header{width:1100px;height:100px;}
+        nav {float:left;/*nav에 준것은 상속이 안된다*/
+            width:100%;
+            height:150px;
+            margin:0 auto;
+            border:1px solid black;position:fixed;}
+        h1 {float:left;
+            padding:30px;
+            font-size:50px;}
+        ul {width: 520px;
+            height:60px;
+            margin:0 auto;
+            border:1px solid red;list-style:none;}/*좌우를 auto로 붙이면 자동으로 가운데 정렬, 가운데 줄거면 float:left를 주면 안된다*/
+        a {display:block;float:left;padding:20px 30px;border:1px solid blue;
+        color:white;text-decoration:none;/*밑줄*/font-weight:bold;background-color:black;}/*width로 하면 공간이 일정하지 않다, 페딩은 내 안의 여백, width를 쓸수도 있지만 padding이 공간과 여백을 주기 편함*/
+        a:visited, a:focus/* : 써져있으면 가상클래스, 어떠한 클래스를 써도 된다*/ {color:gray;text-decoration:none;}
+        a:hover ~ a {color:gray;}/*아래로는 선택 가능하지만 상위로는 못 올라간다, 형제도 불가능, 탭을 css로 만드는 것 비추천*/
+        a:first-child{ border-top-left-radius:1em;border-bottom-left-radius:1em;}/*첫번째a 테두리의 위쪽에 왼쪽에 반지름(radius)모서리 주는 것과 같음*/
+        a:last-child{border-top-right-radius: 1em;border-bottom-right-radius: 1em;}/*마지막a*/
+        section{width:982px;height:4480px;float:left;margin:0 auto;}
+        .alp{width:982px;height:2000px;}
+        .be{width:982px;height:2480px;float:left;margin:0 auto;padding: auto;}
+        #a{width:300px;height:300px;background-color:yellow;position:sticky;top:151px;margin:0;float:left;}
+        #b{width:200px;height:200px;background-color:green;margin:10px;top:150px;}
+        #c{width:200px;height:200px;background-color:pink;margin:10px;}
+        #d{width:200px;height:200px;background-color:purple;margin:10px;}
+        #e{width:200px;height:200px;background-color:aqua;margin:10px;}
+        .a{width:100%;height:900px;background-color:orange;}
+        .b{width:625px;height:438px;background-color:antiquewhite;position:sticky;top:150px;margin:10px;float:right;}
+        .c{}
+        footer{float:left;}
+    </style>
+</head>
+<body>
+    <header>
+    <nav>
+        <h1><a href="#">kakao</a></h1>
+        <ul>
+            <li><a href="#">카카오</a></li>
+            <li><a href="#">뉴스</a></li>
+            <li><a href="#">기술과서비스</a></li>
+            <li><a href="#">약속와책임</a></li>
+        </ul>
+    </nav>
+    </header>
+    <section>
+        <article class="alp">
+            <a id="a" href="#"></a>
+            <a id="b" href="#"></a>
+            <a id="c" href="#"></a>
+            <a id="d" href="#"></a>
+            <a id="e" href="#"></a>
+        </article>
+        <article class="be">
+            <a class="a" href="#"></a>
+            <a class="b" href="#"></a>
+            <a class="c" href="#"></a>
+            <a class="d" href="#"></a>
+            <a class="e" href="#"></a>
+        </article>
+    </section>
+    <footer>
+        <div>
+            <ul>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+        <div>
+            <p>Copyright &copy; 2021 funnycom</p>
+        </div>
+    </footer>
+</body>
+</html>

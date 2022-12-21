@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transition실무</title>
+    <style>
+        *{margin:0;padding:0;}
+        div{width:300px;height:200px;position:absolute;
+            left:30px;top:30px;cursor:pointer;overflow:hidden;}
+        img{transform:scale(1);/*원래 크기*/transition:all 0.2s;}
+        div:hover img{transform:scale(1.1);}
+        span{width:300px;height:200px;display:block;background-color:rgba(0,0,0,0.5);
+        color:white;font-size:2em;text-align:center;line-height:200px;position:absolute;top:-200px;transition:all 0.2s;}
+        div:hover span{top:0px;}
+    </style>
+</head>
+<body>
+    <div>
+        <img src="images/prod1.jpg">
+        <span>상세설명</span>
+    </div>
+</body>
+</html>

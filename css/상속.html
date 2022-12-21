@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>상속</title>
+    <!-- css : cascading style sheets의 약자, 스타일 상속이라는 기본개념을 가지고 있다-->
+    <style>
+        body {background-color:skyblue;color:blue;}/*문서 최상층 영역, */
+        ul {color:purple;list-style:square;}/*블릿기호도 ul에 있는 글자에 적용, 부모에게 적용하면 자식에도 적용됨*/
+    </style>
+    <link href="style.css" rel="stylesheet" type="text/css"><!-- css파일을 외부로 적용-->
+</head>
+<body>
+    <h2>이용방법이 회원등급에 따라 변경되었음을 알립니다.</h2>
+    <p>기존 그린등급은 기존혜택에서 5%할인을 추가로 해드립니다.</p><!--h2,p태그는 기본값 검정색-->
+    <ul>
+        <li>1인 : 40,000원</li>
+        <li>2인 : 60,000원</li>
+        <li>3인 : 80,000원</li>
+        <li>4인 : 100,000원</li>
+        <li>4인 이상일 경우 상의해 주세요.</li>
+    </ul>
+</body>
+</html>

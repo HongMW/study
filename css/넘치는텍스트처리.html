@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>overflow-text</title>
+<style>
+.over1{	
+    text-overflow:clip;/*텍스트 잘라버림(기본값)*/
+}
+.over2{	
+    text-overflow:ellipsis;/*생략*/
+
+}
+p {
+    font-size:1.5em;
+	white-space:nowrap;/*이 공간에 해당하는 것을 일자로 처리하는 것(enter처리 하지 마라), 줄바꿈하지 않는다.*/
+    border:1px solid black;
+    width:400px;
+    padding:10px;
+	margin-bottom:10px;
+	margin-right:10px;
+    overflow:hidden;/*넘치면 숨겨라*/
+}
+</style>
+
+<!--[if lt IE 9]>
+<script src="html5shiv.js"></scirpt>
+<![endif]-->
+</head>
+
+<body>
+    <p class="over1"> 성산의 날씨는 다음주 내내 높은 구름에 햇살 가득이라고 합니다. 목요일이면 섭씨 27도까지 오른다고 하지만,오늘 부는 바람이 쾌적한 균형을 잡아 마당에 마당에 나가 앉아 있는 시간이 많아질듯 합니다.</p>
+    <p class="over2"> 성산의 날씨는 다음주 내내 높은 구름에 햇살 가득이라고 합니다. 목요일이면 섭씨 27도까지 오른다고 하지만,오늘 부는 바람이 쾌적한 균형을 잡아 마당에 마당에 나가 앉아 있는 시간이 많아질듯 합니다.</p>
+</body>
+</html>

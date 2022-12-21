@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 테이블</title>
+    <style>
+        *{margin:0;padding:0;}
+        .wrap{width:80%;margin:0 auto;}
+        table{width:100%;border-collapse:collapse;border-spacing:0;}/*보더를 포함해서 가득차게, 보더의 공간을 0으로*/
+        th, td{padding:10px;border:1px solid #ccc;}
+        th{width:80px;background:#e1e1e1;}/*모든 디바이스에서 적용*/
+        @media screen  and (max-width:760px) {
+        table, tbody, th, td, tr {display:block;box-sizing:border-box;}
+        table{border-top:2px solid #aaa;
+            border-left:1px solid #ccc;}/*테두디 위쪽 색상을 2px*/
+        tr{overflow:hidden;}
+        th {width:80px;
+            height:100%;
+            float:left;
+            border: 0;
+            border-right:1px solid #ccc;
+            border-bottom:1px solid #ccc;}
+        td{width:calc(100% - 80px);height:100%;float:left;border:0;border-right:1px solid #ccc;border-bottom:1px solid #ccc;}
+        tr:last-child {height:100px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap"><!--묶어서 가운데로 주기 위해-->
+        <h1>반응형 테이블</h1>
+        <table border="1">
+            <tbody><!--테이블의 바디-->
+                <tr>
+                    <th>이름</th><!--테이블 제목으로 글씨가 굵어짐-->
+                    <td>홍길동</td>
+                    <th>나이</th>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <th>성별</th>
+                    <td>남자</td>
+                    <th>지역</th>
+                    <td>양천구</td>
+                </tr>
+                <tr>
+                    <th>취미</th>
+                    <td colspan="3">의적활동</td>
+                </tr>
+                <tr>
+                    <th>한마디</th>
+                    <td colspan="3">
+                        호부호형을 하고싶습니다.<br>
+                        동에 번쩍 서에 번쩍 어디든 나타납니다.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
