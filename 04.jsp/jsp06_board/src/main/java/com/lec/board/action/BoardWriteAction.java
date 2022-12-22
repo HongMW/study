@@ -21,7 +21,7 @@ public class BoardWriteAction implements Action {
 		ActionFoward forward = null;
 		BoardBean board = null;
 		String realFolder = "";
-		String saveFolder = "C:/Temp/upload";
+		String saveFolder = "d:/lec03/99.temp/upload";
 		int filesize = 1024*1024*5;
 
 		String p = req.getParameter("p");
@@ -44,14 +44,12 @@ public class BoardWriteAction implements Action {
 			board.setBoard_content(multi.getParameter("board_content"));
 			board.setBoard_file(multi.getParameter(multi.getOriginalFileName((String) multi.getFileNames().nextElement())));
 
-			System.out.println("1.====> " + board.toString());
-
-
+			// System.out.println("====> " + board.toString());
 			BoardWriteService boardWriteService = new BoardWriteService();
 			boardWriteService.registerBoard(board);
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			// TODO: handle exception
 		}
 
 
