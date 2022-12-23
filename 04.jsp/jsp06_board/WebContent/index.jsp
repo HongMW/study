@@ -13,6 +13,15 @@
 
 </head>
 <body>
+<!--  
+1. index.jsp = 
+     <a href="boardWriteForm.bo?p=1&f=board_name&q=" class="btn btn-success mr-sm-2">게시판글쓰기</a>
+
+2. board_detail.jsp = boardDeleteForm
+
+
+-->
+
 	<div class="container" align="center">
 	
 		<div class="jumbotron">
@@ -21,7 +30,7 @@
 			<p>게시판관리페이지 입니다. 글쓰기를 하려면 <strong class="text-danger">게시판글쓰기버튼</strong>을
 			클릭하세요!</p>
 		</div>
-		<a href="boardWriteForm.bo" class="btn btn-success mr-sm-2">게시판글쓰기</a>
+		<a href="boardWriteForm.bo?p=1&f=board_name&q=" class="btn btn-success mr-sm-2">게시판글쓰기</a>
 		<a href="boardList.bo?p=1&f=board_name&q=" class="btn btn-success">게시판글 목록보기</a>
 	</div>
 </body>
