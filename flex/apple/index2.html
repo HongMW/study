@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="apple-touch-icon" sizes="57x57" href="./images/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="120x120" href="./images/apple-icon-120x120.png">
+<link rel="icon" type="images/png" sizes="16x16" href="./images/favicon-16x16.png">
+<link rel="manifest" href="./images/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="./images/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+		input[type="checkbox"]{display:none;}
+		.mb_menu{display:none;}
+		form{display: none;}
+		nav {width:100%;height:44px; background:black;position:fixed;left:0;top:0;}
+		nav ul {
+				width:90%;margin:0 auto; height:44px;
+				display:flex;align-items:center;justify-content:center;
+		}
+		nav ul li{flex-basis: 10%;}
+		nav ul li a{color: #f5f5f7;}
+		aside{width:100%; height:44px;margin-top:44px;display:flex;align-items:center;justify-content:center;background-color: #fbfbfd;}
+		aside p{font-size: 14px;}
+        aside p strong{color: teal; font-weight: normal;}
+		/*sec_1*/
+		#sec_1{width:100%;display:flex;flex-direction:column;}
+		#pro13{height:613px;background: #fbfbfd url(./images/hero_iphone_13pro__dhnsegysa42u_large.jpg) no-repeat center bottom;display:flex;flex-direction:column;
+		align-items:center;background-size:cover;
+		}
+		#pro13 h2{font-size: 48px; padding-top: 53px;}
+		#pro13 h3{margin-top: 5px; color: #1d1d1f; font-size: 24px; font-weight: normal;}
+		.pro13_link {margin: 20px;}
+        .pro13_link a{color: #06c; margin-left: 32px; font-size: 19px;}
+        .pro13_link a:hover{text-decoration: underline;}
+		/*pro13_2*/
+		#pro13_2{height:613px;background:url(./images/hero_iphone_13__f194u1rdooeq_large.jpg) no-repeat center bottom;display:flex;flex-direction:column;
+		align-items:center;background-size:cover;
+		}
+		#pro13_2 h2{font-size: 48px; padding-top: 53px; color: #f5f5f7;}
+        #pro13_2 h3{margin-top: 5px; color: #fec2eb; font-size: 24px; font-weight: normal;}
+        #pro13_2 > .pro13_link a{color: #2997ff; margin-left: 32px; font-size: 19px;}
+		/*macbook*/
+		#macbook{padding-top: 50px; height: 736px;  background: #fbfbfd url(./images/hero_macbookpro__eatonjfwvuc2_largetall.jpg) no-repeat center bottom; display: flex; flex-direction: column; align-items: center;}
+        #macbook h2{font-size: 56px; font-weight: 600; color: #1d1d1f;}
+        #macbook h3{font-size: 28px; font-weight: 400; color: #1d1d1f;}
+        #macbook p{font-size: 17px; font-weight: 400; color: #86868b; padding-top: 18px;}
+		/*sec_2*/
+		#sec_2{display:flex;flex-direction:column;}
+		.art{display:flex;flex-direction:row;flex-wrap:wrap;flex:1;}
+		.art1{height:580px;display:flex;flex-direction:column-reverse;
+		align-items:center;
+		background: url(./images/tile_freeshows_e35b5brgkmi6_large.jpg) no-repeat center top; flex:1; background-size: cover;}
+		.art1 h4{font-size: 32px; font-weight: 600; text-align: center; background: linear-gradient(#e7f0fd, #648fff); text-fill-color: transparent; background-clip: text;}
+		.art1 h5{font-size: 21px; color: white; font-weight: 400; text-align: center;}
+        .art1 > .pro13_link a{color: #fff; font-size: 17px; font-weight: 400;}
+        .art1 > .pro13_link{padding-bottom: 10px;}
+		.art2{height: 580px; display: flex; flex-direction: column-reverse; background: url(./images/promo_tile_tv4k__cbz6fpnn6kz6_large.jpg) no-repeat center top; flex:1; background-size: cover;align-items:center;justify-content:flex-end; }
+		.art2 span{font-size:14px;font-weight:600; margin-top: 30px;}
+        .art2 h5{font-size:40px; font-weight: 600; color: #1d1d1f; margin-top: 10px; text-align: center;}
+        .art2 p{color:#6e6e73;font-size:12px;}
+        .art2 > .pro13_link a{font-size: 17px; font-weight: 400;}
+        .art3{height: 580px; display: flex; flex-direction: column-reverse; align-items: center; background: url(./images/promo_ipad__fioegapg12qi_medium.jpg) no-repeat center top; flex:1; background-size: cover;}
+        .art3 span{font-size:14px;font-weight:600; margin-top: 30px;}
+        .art3 h4{font-size:40px; font-weight: 600; color: #1d1d1f; text-align: center;}
+        .art3 h5{font-size:21px; font-weight: 400; color: #1d1d1f; text-align: center;}
+        .art3 > .pro13_link{padding-bottom: 10px;}
+        .art3 > .pro13_link a{font-size: 17px; font-weight: 400;}
+        .art4{height: 580px; display: flex; flex-direction: column-reverse; align-items: center; background: url(./images/promo_ipad_mini__spq4zjcuuaie_medium.jpg) no-repeat center top; flex:1; background-size: cover; justify-content: flex-end;}
+        .art4 h4{margin-top: 50px;}
+        .art4 h5{font-size:21px; font-weight: 400; color: #1d1d1f; margin-top: 10px; text-align: center;}
+        .art4 p{color:#6e6e73;font-size:12px;}
+        .art4 > .pro13_link a{font-size: 17px; font-weight: 400;}
+        .art5{height: 580px; display: flex; flex-direction: column-reverse; align-items: center; background: url(./images/tile_airpods__fuv6vgn42y2q_large.jpg) no-repeat center top; flex:1; background-size: cover;}
+        .art5 p{font-size:12px;font-weight:400; margin-top: 6px; color: #86868b;}
+        .art5 h4{font-size:40px; font-weight: 600; color: #1d1d1f; text-align: center;}
+        .art5 h5{font-size:21px; font-weight: 400; color: #1d1d1f; text-align: center; margin-top: 4px;}
+        .art5 > .pro13_link{padding-bottom: 10px;}
+        .art5 > .pro13_link a{font-size: 17px; font-weight: 400;}
+        .art6{height: 580px; display: flex; flex-direction: column-reverse; align-items: center; background: url(./images/tile_lte_avail__eqbz3ui0dz8m_large.jpg) no-repeat center top; flex:1; background-size: cover; justify-content: flex-end;}
+        .art6 span{margin-top: 30px; font-size: 12px; font-weight: 400; color: #bf4800;}
+        .art6 h4{margin-top: 8px;}
+        .art6 h5{font-size:21px; font-weight: 400; color: #1d1d1f; margin-top: 10px; text-align: center;}
+        .art6 p{color:#6e6e73;font-size:12px;}
+        .art6 > .pro13_link a{font-size: 17px; font-weight: 400;}
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="ch_menu">
+    <nav>
+        <ul class="pc_menu">
+            <li><a href="https://www.apple.com/kr/"><img src="./images/globalnav_apple_image__cxwwnrj0urau_large.svg" alt="logo"></a></li>
+            <li><a href="https://www.apple.com/kr/store">스토어</a></li>
+            <li><a href="https://www.apple.com/kr/mac/">Mac</a></li>
+            <li><a href="https://www.apple.com/kr/ipad/">iPad</a></li>
+            <li><a href="https://www.apple.com/kr/iphone/">iPhone</a></li>
+            <li><a href="https://www.apple.com/kr/watch/">Watch</a></li>
+            <li><a href="https://www.apple.com/kr/music/">Music</a></li>
+            <li><a href="https://support.apple.com/ko-kr">고객지원</a></li>
+            <li><a href="#">돋보기</a></li>
+            <li><a href="#">스토어</a></li>
+        </ul>
+        <ul class="mb_menu">
+            <li class="sall_logo"><a href="https://www.apple.com/kr/"><img src="./images/globalnav_apple_image__b5er5ngrzxqq_small.svg" alt="small_logo"></a></li>
+            <li class="small_bag"><a href="#"><img src="./images/globalnav_bag_image__yzte50i47ciu_small.svg" alt="small_bag"></a></li>
+            <li class="menu_bar"><a href="#"><label for="ch_menu"></label></a></li>
+            </ul>
+        <form>
+            <li><input type="search" id="search" placeholder="apple.com 검색"></li>
+        </form>
+    </nav>
+    <aside>
+        <p><strong>온라인으로 쇼핑</strong>하고 무료 배송, 스페셜리스트 지원 등의 혜택을 받으세요.</p>
+    </aside>
+   <section id="sec_1">
+        <div id="pro13">
+            <h2>iPhone 13 Pro</h2>
+            <h3>이게 바로 프로.</h3>
+            <div class="pro13_link">
+                <a href="https://www.apple.com/kr/iphone-13-pro/">더 알아보기 ></a>
+                <a href="https://www.apple.com/kr/shop/buy-iphone/iphone-13-pro">구입하기 ></a>
+            </div>
+        </div>
+        <div id="pro13_2">
+            <h2>iPhone 13 Pro</h2>
+            <h3>일상을 위한 비상한 능력.</h3>
+            <div class="pro13_link">
+                <a href="https://www.apple.com/kr/iphone-13/">더 알아보기 ></a>
+                <a href="https://www.apple.com/kr/shop/buy-iphone/iphone-13">구입하기 ></a>
+            </div>
+        </div>
+        <div id="macbook">
+            <h2>MackBook Pro</h2>
+            <h3>프로다운 막강한 파워.</h3>
+            <p>출시일은 추후 공개됩니다</p>
+            <div class="pro13_link">
+                <a href="https://www.apple.com/kr/macbook-pro-14-and-16/">더 알아보기 ></a>
+                <a href="https://www.apple.com/kr/shop/buy-mac/macbook-pro/14%ED%98%95">가격 보기 ></a>
+            </div>
+        </div>
+    </section>
+      <section id="sec_2">
+      <div class="art">
+            <div class="art1">
+                <div class="pro13_link">
+                    <a href="https://www.apple.com/kr/apple-tv-plus/">더 알아보기 ></a>
+                    <a href="https://www.apple.com/kr/#modal">알림 신청 ></a>
+                </div>
+                
+                <h5>Apple Original 콘텐츠는<br> 오직 Apple TV+에서만.<br>11월 4일 시작됩니다.</h5>
+                <h4><img src="./images/logo__dcojfwkzna2q_large.png" alt="appletv"></h4>
+            </div>
+            <div class="art2">
+                <div class="pro13_link">
+                    <a href="https://www.apple.com/kr/apple-tv-4k/">더 알아보기 ></a>
+                    <a href="https://www.apple.com/kr/shop/buy-tv/apple-tv-4k">주문하기 ></a>
+                </div>
+                <h5>당신의 TV,<br>Apple을 만나다.</h5>
+                <h4><img src="./images/tv4k_logo__bwn2kbgd6ixe_largetall.png" alt="tv4k"></h4>
+                <span>New</span>
+            </div>
+        </div>
+    <div class="art">
+            <div class="art3">
+                <div class="pro13_link">
+                    <a href="https://www.apple.com/kr/ipad-10.2/">더 알아보기 ></a>
+                    <a href="https://www.apple.com/kr/shop/buy-ipad/ipad-10-2">구입하기 ></a>
+                </div>
+                <h5>매사를 더욱 쉽게.</h5>
+                <h4>iPad</h4>
+                <span>새로워진</span>
+            </div>
+            <div class="art4">
+                <div class="pro13_link">
+                    <a href="https://www.apple.com/kr/ipad-mini/">더 알아보기 ></a>
+                    <a href="https://www.apple.com/kr/shop/buy-ipad/ipad-mini">구입하기 ></a>
+                </div>
+                
+                <h5>메가급 선능. 크기만 미니.</h5>
+                <h4><img src="./images/promo_logo_ipad_mini__n5nqff6gq8yu_medium.png" alt="ipadmini"></h4>
+            </div>
+            </div>
+    <div class="art">
+                <div class="art5">
+                    <div class="pro13_link">
+                        <a href="https://www.apple.com/kr/airpods-3rd-generation/">더 알아보기 ></a>
+                        <a href="https://www.apple.com/kr/shop/product/MME73KH/A/airpods-3%EC%84%B8%EB%8C%80">가격 보기 ></a>
+                    </div>
+                    <p>출시일은 추후 공개됩니다</p>
+                    <h5>공간 음향과 함께, 완전히 새롭게.</h5>
+                    <h4>AirPods</h4>
+                </div>
+                <div class="art6">
+                    <div class="pro13_link">
+                        <a href="https://www.apple.com/kr/apple-watch-series-7/">더 알아보기 ></a>
+                        <a href="https://www.apple.com/kr/shop/buy-watch/apple-watch">구입하기 ></a>
+                    </div>
+                    
+                    <h5>더 크게 앞서 나아가다.</h5>
+                    <h4><img src="./images/watch_logo_lte__sd64ksudvayy_medium.png" alt="watch"></h4>
+                    <span>New</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+ <!--  <footer>
+        <div id="foot1">
+            <input type="checkbox" id="shopping">
+            <ul class="shop">
+                <li><a href="https://www.apple.com/kr/store"><label for="shopping">쇼핑 및 알아보기</label></a></li>
+                <li><a href="https://www.apple.com/kr/mac">Mac</a></li>
+                <li><a href="https://www.apple.com/kr/ipad">iPad</a></li>
+                <li><a href="https://www.apple.com/kr/iphone">iPhone</a></li>
+                <li><a href="https://www.apple.com/kr/watch">Watch</a></li>
+                <li><a href="https://www.apple.com/kr/music">Music</a></li>
+                <li><a href="https://www.apple.com/kr/airpods">AirPods</a></li>
+                <li><a href="https://www.apple.com/kr/tv-home">TV 및 홈</a></li>
+                <li><a href="https://www.apple.com/kr/ipod-touch">iPod touch</a></li>
+                <li><a href="https://www.apple.com/kr/airtag">AirTag</a></li>
+                <li><a href="https://www.apple.com/kr/shop/accessories/all">액세서리</a></li>
+            </ul>
+            <input type="checkbox" id="service">
+            <ul class="ser">
+                <li><a href="#"><label for="service">서비스</label></a></li>
+                <li><a href="https://www.apple.com/kr/apple-music/">Apple Music</a></li>
+                <li><a href="https://www.apple.com/kr/apple-tv-plus/">Apple TV+</a></li>
+                <li><a href="https://www.apple.com/kr/apple-arcade/">Apple Arcade</a></li>
+                <li><a href="https://www.apple.com/kr/icloud/">iCloud</a></li>
+                <li><a href="https://www.apple.com/kr/apple-books/">Apple Books</a></li>
+                <li><a href="https://www.apple.com/kr/apple-podcasts/">Apple Podcast</a></li>
+                <li><a href="https://www.apple.com/kr/app-store/">App Store</a></li>
+            </ul>
+            <input type="checkbox" id="user">
+            <ul class="foot1_user">
+                <li><a href="#"><label for="user">계정</label></a></li>
+                <li><a href="https://appleid.apple.com/kr/">Apple ID 관리</a></li>
+                <li><a href="https://secure2.store.apple.com/kr/shop/signIn/account?ssi=1AAABfNmKUxEgrqWLtxXIm6xbPOkqITAKY8Hz6Z2bUhf6NzD3uJO0pXIAAAA2aHR0cHM6Ly9zZWN1cmUyLnN0b3JlLmFwcGxlLmNvbS9rci9zaG9wL2FjY291bnQvaG9tZXx8AAIB54vM1wibUSa_vSd5pxWAJSXEZ_58JyUTzos41Q8f8Yk">Apple Store 계정</a></li>
+                <li><a href="https://www.icloud.com/">iCloud.com</a></li>
+            </ul>
+            <input type="checkbox" id="store">
+            <ul class="foot1_store">
+                <li><a href="#"><label for="store">Apple Store</label></a></li>
+                <li><a href="https://www.apple.com/kr/retail/">매장 찾기</a></li>
+                <li><a href="https://www.apple.com/kr/retail/geniusbar/">Genius Bar</a></li>
+                <li><a href="https://www.apple.com/kr/retail/today/">Today at Apple</a></li>
+                <li><a href="https://www.apple.com/kr/retail/camp/">Apple 캠프</a></li>
+                <li><a href="https://apps.apple.com/kr/app/apple-store/id375380948">Apple Store 앱</a></li>
+                <li><a href="https://www.apple.com/kr/shop/refurbished">리퍼 및 특가 제품</a></li>
+                <li><a href="https://www.apple.com/kr/shop/browse/financing">금융 혜택</a></li>
+                <li><a href="https://www.apple.com/kr/trade-in">Apple Trade In</a></li>
+                <li><a href="https://secure2.store.apple.com/kr/shop/signIn/orders?ssi=1AAABfNmMXvsg0dqqG7klIejF57yPeoOVBNXPnfQygg7Q08DR8I6U6CYAAAA0aHR0cHM6Ly9zZWN1cmUyLnN0b3JlLmFwcGxlLmNvbS9rci9zaG9wL29yZGVyL2xpc3R8fAACAYmCDkMZC8T-0nlViWKkLIA8z-umgbTdgWdG4TPYPcUP">주문 상태</a></li>
+                <li><a href="https://www.apple.com/kr/shop/help/">쇼핑 도움말</a></li>
+            </ul>
+            <input type="checkbox" id="business">
+            <ul class="busi">
+                <li><a href="#"><label for="business">비즈니스</label></a></li>
+                <li><a href="https://www.apple.com/kr/business/">Apple과 비즈니스</a></li>
+                <li><a href="https://www.apple.com/kr/retail/business/">비즈니스를 위한 제품 쇼핑하기</a></li>
+            </ul>
+            <input type="checkbox" id="education">
+            <ul class="edu">
+                <li><a href="#"><label for="education">교육</label></a></li>
+                <li><a href="https://www.apple.com/kr/education/">Apple과 교육</a></li>
+                <li><a href="https://www.apple.com/kr/education/k12/how-to-buy/">초중고용 제품 쇼핑하기</a></li>
+                <li><a href="https://www.apple.com/kr-k12/store">대학 생활을 위한 제품 쇼핑하기</a></li>
+            </ul>
+            <input type="checkbox" id="values">
+            <ul class="val">
+                <li><a href="#"><label for="values">Apple의 가치관</label></a></li>
+                <li><a href="https://www.apple.com/kr/accessibility/">손쉬운 사용</a></li>
+                <li><a href="https://www.apple.com/kr/environment/">환경</a></li>
+                <li><a href="https://www.apple.com/kr/privacy/">개인정보 보호</a></li>
+                <li><a href="https://www.apple.com/kr/supplier-responsibility/">협력업체에 대한 책임</a></li>
+            </ul>
+            <input type="checkbox" id="information">
+            <ul class="info">
+                <li><a href="#"><label for="information">Apple 정보</label></a></li>
+                <li><a href="https://www.apple.com/kr/newsroom/">Newsroom</a></li>
+                <li><a href="https://www.apple.com/kr/leadership/">Apple 리더십</a></li>
+                <li><a href="https://www.apple.com/careers/kr/">채용 안내</a></li>
+                <li><a href="https://www.apple.com/compliance/">윤리 및 규정 준수</a></li>
+                <li><a href="https://www.apple.com/apple-events/">이벤트</a></li>
+                <li><a href="https://www.apple.com/kr/job-creation/">일자리 창출</a></li>
+                <li><a href="https://www.apple.com/kr/contact/">Apple 연락처</a></li>
+            </ul>
+        </div>
+        <div id="foot2">
+            <p class="call">다양한 쇼핑 방법:<strong>Apple Store를 방문</strong>하거나, <strong>리셀러</strong>를 찾아보거나, 080-330-8877번으로 전화하세요.</p>
+            <div class="copy">
+                <p>Copyright &copy; 2021 Apple Inc. 모든 권리 보유.</p>
+                <ul>
+                    <li><a href="#">개인정보 처리 방침 |</a></li>
+                    <li><a href="#">웹 사이트 이용 약관 |</a></li>
+                    <li><a href="#">판매 및 환불 |</a></li>
+                    <li><a href="#">법적 고지 |</a></li>
+                    <li><a href="#">사이트맵 </a></li>
+                </ul>
+                <span class="ko">대한민국</span>
+            </div>
+        </div>
+    </footer>-->
+</body>
+</html>
