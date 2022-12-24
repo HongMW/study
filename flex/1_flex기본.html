@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1_flex기본</title>
+    <style>
+        .container{display:flex;background:powderblue;
+            /*flex-direction:column-reverse;*/
+            /*기본값 flex-direction:row;*/
+            flex-direction:column;
+            /*flex-direction:row;*/
+            align-items:center;
+            flex-basis:1;
+            height:200px;}
+        #item1{position:fixed;z-index:99999;width:25px;height:25px;display:block;left:10px;top:10px;}
+        .item{background:tomato;color:white;border:1px solid white;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="item1">1</div>
+        <div class="item" id="item2">2</div>
+        <div class="item" id="item3">3</div>
+        <div class="item" id="item4">4</div>
+        <div class="item" id="item5">5</div>
+    </div>
+</body>
+</html>
