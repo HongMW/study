@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>layout</title>
+    <style>
+        *{margin:0;padding:0;}
+        .container{display:flex;flex-direction:column;}
+        header{border-bottom:1px solid gray;padding-left:20px;}
+        footer{border-top:1px solid gray;text-align:center;}
+        .content{display:flex;}
+        .content > nav{border-right:1px solid gray;}
+        .content > aside{border-left:1px solid gray;}
+        nav, aside{flex-basis:150px;flex-shrink:0;}/*flex의 width값이 150px 사이트 크기를 줄였을때 줄어들지 않게*/
+
+        @media all and (max-width:800px){
+            .content{display:flex;flex-direction:column/*-reverse*/;}
+            .content > nav {border-right:0;}
+            .content > aside {border-left:0;}
+            aside{display:none;}
+            main{order:0;}
+            nav{order:1;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+           <h1>flex</h1>
+        </header>
+        <section class="content">
+           <nav>
+              <ul>
+                 <li>html</li>
+                 <li>css</li>
+                 <li>javascript</li>
+              </ul>
+           </nav>
+           <main><!--메인에 딱 한번쓰는 태그-->
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo nunc sit amet scelerisque tempor. Proin nec hendrerit turpis, a interdum sapien. In et molestie dolor. Aenean luctus consectetur magna, at varius tortor ornare nec. Quisque et justo pretium, dignissim nunc ut, porta lorem. Nam non faucibus lectus, nec accumsan odio. Phasellus eu egestas tellus, eu gravida ante. Aenean placerat, augue vitae sagittis mollis, diam turpis iaculis dolor, at ullamcorper enim felis nec ante. Nullam vulputate dui blandit ex viverra, sed mattis tellus facilisis. Phasellus non urna a velit dictum lacinia ac nec tortor. Etiam posuere luctus tellus eget blandit. Nunc tincidunt libero at tellus tempor, nec dapibus ligula vulputate. Donec sed dignissim lorem. Quisque ornare scelerisque nulla vel mollis.
+            </main>
+           <aside>
+              AD(광고)
+           </aside>
+        </section>
+        <footer>
+           <a href="https://www.naver.com">홈페이지</a>
+        </footer>
+     </div>
+</body>
+</html>
