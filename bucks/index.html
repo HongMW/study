@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0;padding:0;}
+        ul{list-style:none;}
+        a{text-decoration:none;color:black;}
+        header{width:100%;height:120px;position:fixed;top:0;background-color:#f6f5ef;z-index:99999;}
+        .ct{width:1100px;margin:0 auto;}
+        .logo{width:75px;height:75px;float:left;background:url(images/logo.png) no-repeat center center;margin:22.5px 0;display:block;}
+        .top_menu{width:850px;height:120px;float:right;}
+        .user{width:500px;height:60px;float:right;}
+        .user li{float:left;}
+        .user li a{display:block;float:left;padding:10px;font-size:13px;color:#333;}
+        .user li a:hover{text-decoration:underline;}
+        nav{width:650px;height:60px;float:right;}
+        nav ul li{float:left;}
+        nav ul li a{display:block;float:left;padding:15px;font-size:13px;color:#555;}
+        nav li a:hover{text-decoration:underline;}
+
+        /* pc에서 보이면 안되는 영역 */
+        #ch_menu, .mobile_menu{display:none;}
+        /* 모바일버전 */
+
+        @media screen and (max-width:624px){
+        header{height:70px;}
+        a{color:#fff;}
+        .ct{width:100%;height:70px;margin:0 auto;}
+        .mobile_menu{display:block;width:195px;height:70px;float:right;
+        border:1px solid red;}
+        .user{display:none;}
+        .logo{width:45px;height:45px;float:left;background-size:100%}
+        .top_menu{position:fixed;top:0;left:100%;z-index:9999;width:100%;height:100%;background:black;transition: all 1s;}
+        .mobile_menu li{float:left;}
+        .mobile_menu li:not(:last-child) a{display:block;padding:20px 15px;border:1px solid green;}
+        label{position:fixed;z-index:999999;background:url(./images/btn_berger_m.png) no-repeat center center;
+        width:30px;height:30px;background-size:100%;display:block;cursor:pointer;margin:20px;transition: all 1s;}
+        .top_menu nav{width:100%;height:100%;position:absolute;right:0;background-color:rgba(0,0,0,0.5);}
+        input[type="checkbox"]:checked ~ .top_menu{left:0;}
+        input[type="checkbox"]:checked ~ .mobile_menu label{background:url(./images/btn_gnb_close.png) no-repeat center center;}
+        input[type="checkbox"]:checked ~ .top_menu li{clear:both;}
+        input[type="checkbox"]:checked ~ .top_menu a{color:white;font-size:15px;}
+        input[type="checkbox"]:checked ~ .top_menu a:hover{color:darkblue;transform:scale(1.3);font-weight:bolder;}
+        input[type="checkbox"]:checked ~ .top_menu a:active{color:blue;}
+        input[type="checkbox"]:checked ~ .mobile_menu label:hover{background:url(./images/btn_gnb_close.png) no-repeat center center;transition:all 1s;transform:rotate(180deg) translatex(0);}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="ct">
+            <a class="logo" href="#"></a>
+            <input type="checkbox" id="ch_menu">
+            <ul class="mobile_menu">
+                <li><a href="#"><img src="./images/icon_user_m.png"width="25"height="30"alt=""></a></li>
+                <li><a href="#"><img src="./images/icon_spot_m.png"width="24"height="32"alt=""></a></li>
+                <li><a href="#"><label for="ch_menu"></label></a></li>
+            </ul>
+            <div class="top_menu">
+                <ul class="user">
+                    <li><a href="#">Sign in</a></li>
+                    <li><a href="#">My Starbucks</a></li>
+                    <li><a href="#">Customer Service & ideas</a></li>
+                    <li><a href="#">Fine a Store</a></li>
+                    <li><a href="#"><img src="./images/icon_magnifier_black.png"title="검색"alt="검색"></a></li>
+                </ul>
+                <nav>
+                    <ul>
+                        <li><a href="#">COFFEE</a></li>
+                        <li><a href="#">MENU</a></li>
+                        <li><a href="#">STORE</a></li>
+                        <li><a href="#">RESPONSIBILITY</a></li>
+                        <li><a href="#">STARBUCKS REWARDS</a></li>
+                        <li><a href="#">WHATSNEW</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
