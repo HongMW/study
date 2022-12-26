@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="com.lec.basic.HelloServlet"/>
+    <fullyQualifiedTypeName name="com.lec.poly.SamsungTV"/>
+    <fullyQualifiedTypeName name="com.lec.poly.LGTV"/>
+    <fullyQualifiedTypeName name="com.lec.poly.BeanFactory"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="com.lec.basic.poly.SonySpeaker"/>
+    <fullyQualifiedTypeName name="com.lec.basic.poly1.TV"/>
+    <fullyQualifiedTypeName name="com.lec.basic.poly2.SonySpeaker"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.AbstractApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.GenericApplicationContext"/>
+    <fullyQualifiedTypeName name="com.lec.basic.poly3.Speaker"/>
+</qualifiedTypeNameHistroy>

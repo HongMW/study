@@ -1,0 +1,9 @@
+package com.lec.poly;
+
+public class SamsungTV {
+
+	public void powerOn() { System.out.println("Samsung TV - pwerOn!!");}
+	public void powerOff() { System.out.println("Samsung TV - pwerOff!!");}
+	public void volumnup() { System.out.println("Samsung TV - volumnup!!");}
+	public void volumndown() { System.out.println("Samsung TV - volumndown!!");}
+}

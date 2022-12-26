@@ -1,0 +1,13 @@
+package com.lec.poly;
+
+public class LGTV implements TV{
+
+	@Override
+	public void powerOn() { System.out.println("LG TV - pwerOn!!");}
+	@Override
+	public void powerOff() { System.out.println("LG TV - pwerOff!!");}
+	@Override
+	public void volumnUp() { System.out.println("LG TV - volumnup!!");}
+	@Override
+	public void volumnDown() { System.out.println("LG TV - volumndown!!");}
+}

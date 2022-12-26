@@ -1,0 +1,16 @@
+package com.lec.poly;
+
+public class TVUser {
+
+	public static void main(String[] args) {
+		
+		SamsungTV tv = new SamsungTV();
+		// LGTV tv = new LGTV();
+		
+		tv.powerOn();
+		tv.powerOff();
+		tv.volumnup();
+		tv.volumndown();
+	}
+
+}
