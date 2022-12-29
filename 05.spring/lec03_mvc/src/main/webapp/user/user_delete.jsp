@@ -15,17 +15,16 @@
 <body>
 	<div class="container" align="center">
 		<div class="mt-4 p-5 bg-primary text-white rounded">
-			<h3>User Delete</h3>
+			<h3>Ueser Delete</h3>
 			<p>상세설명......................</p>
 			
 		</div>
 		<br>
 		
 		<form action="deleteUser.do" method="post">
-			<input type="hidden" name="id" value="${ param.id}">
+			<input type="hidden" name="id" value="${ param.id }">
 			<button type="submit" class="btn btn-danger text-white"><b>${ param.id }</b>를 삭제하겠습니까?</button>
 		</form>
-		
 	</div>		
 </body>
 </html>			
