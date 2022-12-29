@@ -56,7 +56,24 @@
 			</div>
 			
 			<div class="col-sm-auto">
-				1 2 3 4 5 6 7 8 9 10			
+				
+				<ul class="pagination justify-content-center">					
+					<c:if test="${ pageInfo.getStartPage() != 1 }">
+						<li class="page-item"><a href="getUserList.do?p=1" class="page-link"><i class="fas fa-fast-backward"></i></a></li>
+						<li class="page-item"><a href="getUserList.do?p=${ pageInfo.getStartPage() - 10 }" class="page-link"><i class="fas fa-backward"></i></a></li>				
+					</c:if>
+				
+					<c:set var="cp" value="${ pageInfo.getCurrentPage() }"/>
+				
+					<c:forEach var="page" begin="${ pageInfo.getStartPage() }" end="${ pageInfo.getEndPage() }">
+						<li class="page-item ${ (cp==page) ? 'active' : ''}"><a href="getUserList.do?p=${page}" class="page-link">${page}</a></li>
+					</c:forEach>
+					
+					<c:if test="${ pageInfo.getEndPage() < pageInfo.getTotalPages() }">
+						<li class="page-item"><a href="getUserList.do?p=${ pageInfo.getEndPage() + 1 }" class="page-link"><i class="fas fa-forward"></i></a></li>				
+						<li class="page-item"><a href="getUserList.do?p=${ pageInfo.getTotalPages() }" class="page-link"><i class="fas fa-fast-forward"></i></a></li>				
+					</c:if>
+				</ul>
 			</div>
 		</div>
 	</div>	
@@ -104,3 +121,22 @@
 	</div> <!-- modal end -->
 </body>
 </html>		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
