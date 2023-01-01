@@ -23,21 +23,23 @@ public class BoardDAO {
 
 	public PageInfo getPageInfo(String tableName, int currentPage, int perPage) {
 		PageInfo pageInfo = new PageInfo();
-		String sql = "select count(*) from" + tableName;
+		String sql = "select count(*) from " + tableName;
 
 		int totalCount = 0;
 		int totalPages = 0;
 		int startPage = 0;
 		int endPage = 0;
-
+		
 		totalCount = jdbcTemplate.queryForInt(sql);
-
+		
 		if(totalCount>0) {
-			totalPages = totalCount / perPage + ((totalCount % perPage == 0) ? 0 : 1);
-			startPage = currentPage/ perPage * perPage + 1 + ((currentPage % perPage == 0) ? -perPage : 0);
+			totalPages = (int)(totalCount / perPage) + ((totalCount % perPage == 0) ? 0 : 1);
+			startPage = (int)(currentPage / perPage) * perPage + 1 + ((currentPage % perPage == 0) ? -perPage : 0);
 			endPage = (startPage >= totalPages) ? totalPages : startPage + perPage - 1;
 		}
+			
 
+		
 		pageInfo.setTotalCount(totalCount);
 		pageInfo.setTotalPages(totalPages);
 		pageInfo.setCurrentPage(currentPage);
@@ -55,15 +57,14 @@ public class BoardDAO {
 	}
 
 	public List<BoardVO> getBoardList(int currentPage, int perPage) {
-
 		String sql = "select * from board limit ?, ?";
-		Object[] args = { currentPage, perPage};
-		return jdbcTemplate.query(sql, args, new BoardRowMapper());
+		Object[] args = {(currentPage-1)*perPage,perPage};
+		return jdbcTemplate.query(sql,args, new BoardRowMapper());
 	}
 
 	public void insertBoard(BoardVO board) {
-		String sql = "insert into board(seq, title, writer, content) "
-	              + " values((select nvl(max(seq), 0)+1 from board t1), ?, ?, ?)";
+		String sql = "insert into board(title, writer, content) "
+	              + " values(?, ?, ?)";
 		jdbcTemplate.update(sql, board.getTitle(), board.getWriter(), board.getContent());
 	}
 
