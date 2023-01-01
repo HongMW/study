@@ -19,7 +19,6 @@
 			<c:if test="${boardList.isEmpty() }">
 				<h5><p class="bg-danger text-white">등록된 게시판 정보가 존재하지 않습니다!!</p></h5>
 			</c:if>
-			<p>상세설명......................</p>
 			
 		</div>
 		<br>
@@ -29,7 +28,6 @@
 				<th scope="col">글번호</th>
 				<th scope="col">글제목</th>
 				<th scope="col">작성자</th>
-				<th scope="col">글내용</th>
 				<th scope="col">조회수</th>
 				<th scope="col">삭제</th>
 			</thead>
@@ -37,9 +35,8 @@
 			<c:forEach  var="board" items="${ boardList }">
 				<tr>
 					<td scope="row"><a href="updateBoard.do?seq=${ board.getSeq() }">${ board.getSeq() }</a></td>
-					<td>${ board.getTitle() }</td>
+					<td><a href="selectBoard.do?seq=${ board.getSeq()}">${ board.getTitle() }</a></td>
 					<td>${ board.getWriter() }</td>
-					<td><a href="selectBoard.do?seq=${ board.getSeq()}">${ board.getContent() }</a></td>
 					<td>${ board.getCnt() }</td>
 					<td align="center">
 						<a href="deleteBoard.do?seq=${ board.getSeq() }" class="btn btn-danger"><i class="fas fa-trash"></i>
@@ -60,7 +57,7 @@
 				<!-- button trigger modal form - user add -->
 				<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addBoard">게시판등록</button>
 			</div>
-			
+
 			<div class="col-sm-auto">
 				
 				<ul class="pagination justify-content-center">					
@@ -71,7 +68,7 @@
 				
 					<c:set var="cp" value="${ pageInfo.getCurrentPage() }"/>
 				
-					<c:forEach var="page" begin="${ pageInfo.getStartPage() }" end="${ pageInfo.getEndPage() }">
+					<c:forEach var="page" begin="${ pageInfo.getStartPage()}" end="${ pageInfo.getEndPage()}">
 						<li class="page-item ${ (cp==page) ? 'active' : ''}"><a href="getBoardList.do?p=${page}" class="page-link">${page}</a></li>
 					</c:forEach>
 					
@@ -113,7 +110,7 @@
 						</div>
 						<div class="input-group mb-3">
 							<div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-comment-dots"></i></span></div>
-				<textarea class="form-control" name="content" id="content" rows="15" cols="40">${ board.getContent() }</textarea>
+							<textarea class="form-control" name="content" id="content" rows="15" cols="40">${ board.getContent() }</textarea>
 						</div>
 					</div> <!-- modal-body -->
  					
