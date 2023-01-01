@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="자원 &apos;food &amp; beverage/foo&amp;beverage.exerd&apos;을(를) &apos;홍민우.exerd&apos;(으)로 이름 바꾸기" description="&apos;foo&amp;beverage.exerd&apos; 자원 이름 바꾸기" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="foo&amp;beverage.exerd" name="홍민우.exerd" stamp="1668146902658" updateReferences="true"/>
+</session>
