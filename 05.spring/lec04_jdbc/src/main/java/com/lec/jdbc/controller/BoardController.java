@@ -23,6 +23,7 @@ public class BoardController {
 			@RequestParam(defaultValue="10") int perPage) {
 
 		PageInfo pageInfo = boardService.getPageInfo(p, perPage);
+		
 		model.addAttribute("pageInfo", pageInfo);
 		model.addAttribute("boardList", boardService.getBoardList(p, perPage));
 		return "board/board_list.jsp";
@@ -46,7 +47,7 @@ public class BoardController {
 	}
 
 	@RequestMapping(value="/deleteBoard.do", method=RequestMethod.POST)
-	public String deleteUser(@RequestParam int seq) {
+	public String deleteBoard(@RequestParam int seq) {
 		boardService.deleteBoard(seq);
 		return "getBoardList.do";
 	}
@@ -58,10 +59,9 @@ public class BoardController {
 	}
 
 	@RequestMapping(value="/updateBoard.do", method=RequestMethod.POST)
-	public String updateUser(BoardVO board) {
+	public String updateBoard(BoardVO board) {
 		boardService.updateBoard(board);
 		return "getBoardList.do";
 	}
-	
-	
+
 }
