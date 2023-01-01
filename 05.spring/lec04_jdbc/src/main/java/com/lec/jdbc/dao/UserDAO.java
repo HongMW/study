@@ -39,13 +39,12 @@ public class UserDAO {
 			startPage = (int)(currentPage / perPage) * perPage + 1 + ((currentPage % perPage == 0) ? -perPage : 0);
 			endPage = (startPage >= totalPages) ? totalPages : startPage + perPage - 1;
 		}
-				
+
 		pageInfo.setTotalCount(totalCount);
 		pageInfo.setTotalPages(totalPages);
 		pageInfo.setCurrentPage(currentPage);
 		pageInfo.setStartPage(startPage);
 		pageInfo.setEndPage(endPage);
-			
 		return pageInfo;
 	}
 		
