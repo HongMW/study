@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	  <style>
+	  	.reverse{
+	  	color: white;
+	  	background-color: black;
+	  	}
+	  </style>
+	<script>
+		// on() : 이벤트를 문서객체에 연결하는 메서드
+		$(function() {
+			// 1. on('이벤트이름', function(이벤트) {})
+			
+			// 실습1.  h1을 클릭할때마다 +를 연결하기
+			//index, html, return html + '+', this
+			$('h1').on('click', function() {
+				$(this).html(function(index, text) {
+					return text + '+';
+				});
+			});
+			
+			// 실습2. mouseenter : reverser 클래스를 추가 -addClass
+			 //		  mouseenter : reverser 클래스를 삭제 -removeClass
+			/* $('h1').on('mouseenter', function() {
+				$(this).addClass('reverse');
+				});
+			});
+			$('h1').on('mouseenter', function() {
+				$(this).removeClass('reverse');
+			}); */
+			
+			// 실습3. mouseenter, mouseleave를 객체로 정의
+			/*  $('h1').on({
+				mouseenter: function() { $(this).addClass('reverse');},
+				mouseleave: function() { $(this).removeClass('reverse');}
+			});  */
+			
+			// 실습4. hover
+			$('h1').hover(
+					function() { $(this).addClass('reverse');},
+					function() { $(this).removeClass('reverse');},
+					);
+		 });
+			
+			
+	</script>
+</head>
+<body>
+	<h1>header-1</h1>
+	<h1>header-2</h1>
+	<h1>header-3</h1>
+</body>
+</html>
