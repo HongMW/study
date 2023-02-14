@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	  <style>
+	  	*{ margin: 5px; }
+	  	input[type=text].on{
+	  	background-color : mediumseagreen;
+	  	color: white;
+	  	}
+	  	p{
+	  	display: none;
+	  	color: #ff0000; /* red */
+	  	}
+	  </style>
+	<script>
+		$(function() {
+			$('#m1 input').focus(function() {
+				$(this).addClass('on');
+			}).blur(function() {
+				$(this).removeClass('on');
+			});
+			
+			$('#m2').focusin(function() {
+				$(this).children().addClass('on');
+			}).focusout(function() {
+				$(this).children().removeClass('on');
+			});
+			
+			// 3. input태그의 값을 변경했을 때
+			$('#m3 input').change(function() {
+				var yn_flag = confirm('값을 수정하겠습니까?');
+// 				alert(yn_flag);
+				if(!yn_flag) {
+					$(this).val(10);
+				}
+			});
+		
+			// 실습1. #m4의 input을 드래그해서 몇개의 문자가 선택되었는지를
+			// alert('??개의 문자가 선택되었습니다');
+			// select(function() {}), val(), length
+			$('#m4 input').select(function() {
+            	var len = $(this).val().length;           			
+            	alert(len+'개의 문자가 선택되었습니다');
+       	    });
+			
+			// 실습2. .myform에서 아이디 or 비번이 입력되지 않았을 경우
+			// p.msg1, p.msg2를 보이거나 숨기기기능 구현
+			// form.submit(function() {}), css(), display: none or block
+			// val(), focus(), return false일 경우가 submit가 취소
+			$('.myform').submit(function() {
+				if(!$('#usrid').val()) {
+					$('.msg1').css('display', 'block');
+					$('#userid').focus();
+					return false;
+				} else {
+					$('.msg1').css('display', 'none');
+				}
+				
+				if(!$('#usrpw').val()) {
+					$('.msg2').css('display', 'block');
+					$('#userpw').focus();
+					return false;
+				} else {
+					$('.msg2').css('display', 'none');
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="m1">
+	<input type="text" placeholder="값을 입력하세요..."/>
+	</div>
+	<div id="m2">
+	<input type="text" placeholder="값을 입력하세요..."/>
+	</div>
+	<div id="m3">
+	<span>값을 수정할 후 다음 입력요소로 입력하기</span>
+	<input type="number" value="10"/>
+	</div>
+	<div id="m4">
+	<input type="text" value="텍스트를 드래그 하시오."/>
+	</div>
+	<hr>
+	<form action="" class="myform">
+		<fieldset>
+		<legend>로그인</legend>
+		<div>
+			<lable for="usrid">아이디</lable>
+			<input type="text" id="usrid">
+		</div>
+		<p class="msg1">아이디를 입력하세요</p>
+		<div>
+			<lable for="usrpw">비밀번호</lable>
+			<input type="text" id="usrpw">
+		</div>
+		<p class="msg2">비밀번호를 입력하세요</p>
+		<button>로그인</button>
+		
+		
+		
+		</fieldset>
+	</form>
+</body>
+</html>
