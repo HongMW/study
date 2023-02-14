@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>Insert title here</title>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+       crossorigin="anonymous"></script>
+   <script>
+      $(function () {
+      var array = [
+         {name : 'Google', link:'http://www.google.com'},
+         {name : 'Amazon', link:'http://www.amazon.com'},
+         {name : 'Daum', link:'http://www.daum.net'},
+         {name : 'Naver', link:'http://www.naver.com'}
+      ];
+      
+      var output = "";
+      //each(object, function(){}); --> for와 유사
+      $.each(array, function(index, item) {
+         output+= '<a href="' + item.link + '">'; // <a href = "www.google.com">Google</a>
+         output+= '<h1>' + item.name + '</h1></a>';
+      });
+      document.body.innerHTML=output;
+      });
+   </script>
+</head>
+<body>
+
+</body>
+</html>
