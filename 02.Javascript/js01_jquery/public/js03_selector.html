@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	   <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+      crossorigin="anonymous"></script>
+	<script>
+		$(function() {
+			$('item').css('color', 'orange');
+			$('h1.item').css('color', 'red');
+			$('h1.item.selected').css('color', 'blue');
+		});
+	</script>
+</head>
+<body>
+	<!-- h1.item[header-$]*3 -->
+	<h1 class="item">header-1</h1>
+	<h1 class="item selected">header-2</h1>
+	<h1 class="item">header-3</h1>
+</body>
+</html>
