@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	   <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+      crossorigin="anonymous"></script>
+	<script>
+		//attr 추가 or 읽기, 삭제
+		$(function() {
+			// 1. 속성읽기
+			//var src = $('img').attr('src');
+			//alert(src);
+			//var wd = $('img')/attr('width');
+			//alert(wd);
+			
+			// 2. 속성지정하기
+			//$('img').attr('width', 400);
+			//$('img').attr('height', 300);
+			
+			// 3. function
+			$('img').attr('width', function(index) {
+				return (index+1) * 100;
+			});
+			
+			// 4. object
+			$('img').attr({
+				'width' : function(index) { return (index+1) * 200; },
+				'height' : 300
+			});
+			
+		});
+		
+	</script>
+</head>
+<body>
+	<!-- img[src="./img/blackpink_$$.jpg" alt=""]*3 -->
+	<img src="./img/blackpink_01.jpg" alt="" />
+	<img src="./img/blackpink_02.jpg" alt="" />
+	<img src="./img/blackpink_03.jpg" alt="" />
+	
+	<!-- h1[data-index="$"]{Header - $}*3 -->
+	<h1 data-index="1">Header - 1</h1>
+	<h1 data-index="2">Header - 2</h1>
+	<h1 data-index="3">Header - 3</h1>
+	
+</body>
+</html>
