@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>Insert title here</title>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+       crossorigin="anonymous"></script>
+       <style>
+       .high-light{background-color:yellow;}
+       .high-light-1{background-color:yellow;}
+       .high-light-2{background-color:orange;}
+       .high-light-3{background-color:blue;}
+       .high-light-4{background-color:green;}
+       .high-light-5{background-color:red;}
+       .high-light-6{background-color:gray;}
+       
+       </style>
+       
+   <script>
+      $(function(){
+          /*$('h1').addClass('high-light'); 
+          $('h1').addClass(function(index) {
+             return 'high-light-' + (index+1);
+          }); */
+          /* $('h1').each(function(index, item) {
+             $(item).addClass('high-light-' + (index+1));
+          }); */
+          $('h1').each(function(index, item) {
+             $(this).addClass('high-light-' + (index+1));
+          });
+      });
+   </script>
+</head>
+<body>
+   <h1 class="high-light">header - 1</h1>
+   <h1>header - 2</h1>
+   <h1>header - 3</h1>
+   <h1>header - 4</h1>
+   <h1>header - 5</h1>
+   <h1>header - 6</h1>
+</body>
+</html>
