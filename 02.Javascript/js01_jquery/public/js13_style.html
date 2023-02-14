@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	   <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+      crossorigin="anonymous"></script>
+	<style>
+		.first { color: pink; }
+		.second { color: red; }
+		.third { color: orange; }
+	</style>
+	<script>
+		$(function() {
+			// 1. style속성읽기
+			var color = $('h1').css('color');
+			//alert(color);
+			
+			// 2. style 속성 추가 or 수정
+			$('h1').css('color', 'green');
+			
+			// 3. array, function
+			var colors = ['purple', 'yellow', 'mediumseagreen'];
+			$('h1').css({
+				color : function(index) { return colors[index];},
+				backgroundColor : 'black'
+			});
+		});
+	</script>
+</head>
+<body>
+	<h1 class="first">Header - 1</h1>
+	<h1 class="second">Header - 2</h1>
+	<h1 class="third">Header - 3</h1>
+</body>
+</html>
