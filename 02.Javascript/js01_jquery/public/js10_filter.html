@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	   <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+      crossorigin="anonymous"></script>
+	<script>
+		$(function(){
+		//$('h1').filter().css()
+		$('h1').filter(':even').css({color:'red', background: 'black'});
+		// 실습1. 홀수만 폰트색상: red, 배경 green
+		$('h1').filter(':odd').css({color:'purple', background: 'green'});
+		// 실습2. 3개씩 건너서 폰트색상 whight, 배경 mediumseagreen
+		//$('h1:nth-child(3n)').css('background', 'mediumseagreen').css('color', 'white');
+		$('h1').filter(function(index) {
+			return index % 3 == 0;
+		}).css({color:'white', background:'mediumseagreen'});
+		});
+	</script>
+</head>
+<body>
+	<h1>header - 0</h1>
+	<h1>header - 1</h1>
+	<h1>header - 2</h1>
+	<h1>header - 3</h1>
+	<h1>header - 4</h1>
+	<h1>header - 5</h1>
+	
+</body>
+</html>
