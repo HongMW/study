@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>Insert title here</title>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+       crossorigin="anonymous"></script>
+   <script>
+      $(function() {
+         var obj = {};
+         obj.name = '홍길동';
+         obj.age = 100;
+         obj.addr = '조선';
+         
+         var obj1 = {};
+         $.extend(obj1, {name : '홍길동', age:1000, addr:'조선', hobby:"선행"});
+      });
+   </script>
+</head>
+<body>
+
+</body>
+</html>
