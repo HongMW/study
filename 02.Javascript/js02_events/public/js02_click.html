@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	<style>
+		*{
+		margin:0px;
+		 padding:0px;
+		 }
+		div{
+		margin: 5px;
+		padding: 3px;
+		border: 3px solid black;
+		border-radius : 10px;
+		}
+	</style>
+	<script>
+		$(function() {
+			// 실습. div영역을 클릭하면 h1, p태그의 문자열을 경고창 popup
+			// $('div').on('click', function() {});
+			$('div').on('click', function() {
+				var h = $(this).find('h1').text();
+				var p = $(this).find('p').text();
+				alert(h + "-" + p);
+			});
+		});
+	</script>
+</head>
+<body>
+	<!-- (div>h1{header - $}+p{paragraph - $})*3 -->
+	<div>
+		<h1>header - 1</h1>
+		<p>paragraph - 1</p>
+	</div>
+	<div>
+		<h1>header - 2</h1>
+		<p>paragraph - 2</p>
+	</div>
+	<div>
+		<h1>header - 3</h1>
+		<p>paragraph - 3</p>
+	</div>
+</body>
+</html>
