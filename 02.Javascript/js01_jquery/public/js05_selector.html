@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	   <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+	<script>
+		//속성선택자
+		$(function() {
+			$('input[type="text"]').val('Hello JQuery!!!');
+			
+			setInterval(function(){
+				var value = $('select > option:selected').val();
+				alert(value);
+			}, 3000);
+		});
+	</script>
+</head>
+<body>
+<input type="text" /><br>
+<input type="password" /><br>
+<input type="radio" /><br>
+<input type="checkbox" /><br>
+<input type="file" /><br>
+
+<select name="" id="" >
+	<option value="Apple">Apple</option>
+	<option value="Dog">Dog</option>
+	<option value="Cat">Cat</option>
+	<option value="Horse">Horse</option>
+	<option value="Elephant">Elephant</option>
+</select>
+</body>
+</html>
