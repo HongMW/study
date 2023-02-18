@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	  <style>
+	  * { margin:0; padding:0; }
+	  #box {
+	  	background: mediumseagreen;
+	  	width: 100px;
+	  	height: 100px;
+	  	position: absolute;
+	  }
+	  </style>
+	<script>
+		/* 
+			Animation
+			
+			A. 메서드형태
+			1. $().animation(object)
+			2. $().animation(object, speed)
+			3. $().animation(object, speed, easing)
+			4. $().animation(object, speed, easing, callback)
+			
+			B. animation 옵션
+			
+			opacity, height, width, top, left, right, margin, paddong, bottom
+			
+			C. animation 정지
+			1. $().stop()
+			2. $().stop(clearQueue)
+			3. $().stop(clearQueue, goToEnd)
+		*/
+		$(function() {
+			
+			$('button').click(function() {
+				$('div').animate({
+					left: '250px',
+					opacity: '0.5',
+					height: '+=150px',
+					width: '+=150px',
+					height: 'toggle',
+					width: 'toggle'
+				});
+			});
+			
+			// animation효과는 누적처리(animation queue)
+			$('#box').click(function() {
+				$(this).animate({height: '300px', opacity: "0.5"}, 'slow');
+				$(this).animate({width: '300px', opacity: "0.5"}, 'slow');
+				$(this).animate({height: '100px', opacity: "0.5"}, 'slow');
+				$(this).animate({width: '100px', opacity: "0.5"}, 'slow');
+			});
+			
+		});
+	</script>
+</head>
+<body>
+	<button>Start Animation</button>
+		<div id="box"></div>
+</body>
+</html>
