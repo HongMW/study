@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	<script>
+		/* 
+			JQuery Effect
+			
+			A. effect method
+			
+			show() : 문서객체를 보이기
+			hide() : 문서객체를 감추기
+			toggle() : show, hide를 번갈아 수행
+			slideDown() : 슬라이딩효과 보이기
+			slideUp() : 슬라이딩효과 감추기
+			slideToggle() : slideDown, slideUp을 번갈아 수행
+			fadeIn() : 서서히 보이기
+			fadeOut() : 서서히 감추기
+			fadeToggle() : fadeIn, fadeOut을 번갈아 수행
+		
+			B. effect 4가지 형태
+			
+			1. $(선택자).method()
+			2. $(선택자).method(speed) : slow, noaml, fast, ms(숫자)
+			3. $(선택자).method(speed, callback) : effect가 끝나면 callback함수를 실행
+			4. $(선택자).method(speed, easing, callback) : easing 애니메이션효과
+		*/
+		$(function() {
+			$('button').click(function() {
+				$('.page').fadeToggle(2000, function() {
+					alert('JQuery Effect Finished!!!')
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<button>JQuery Effect - toggle</button>
+	<div class="page">
+		<h1>WC 못 나가는 '괴물 공격수', 7부 리그에서 임대 러브콜 '28일만 뛰고 가!'</h1>
+		<p>[스포츠조선 김가을 기자]'28일만 뛰고 가.'
+
+월드컵 무대에 나서지 못하는 '괴물 공격수' 엘링 홀란드(맨시티)를 향한 러브콜이 떴다.
+
+영국 언론 데일리스타는 15일(이하 한국시각) '맨시티가 홀란드의 임대 이적을 제안받았다'고 보도했다.
+
+홀란드는 전 세계가 주목하는 공격 자원이다. 올 시즌 도르트문트를 떠나 맨시티로 이적했다. 
+
+잉글랜드 프리미어리그(EPL)에서도 매서운 발끝을 선보이고 있다. 그는 EPL 13경기에서 18골을 넣었다. 
+
+해트트릭(한 경기 세 골)도 세 차례나 기록했다. EPL, 유럽챔피언스리그(UCL) 등 모든 대회를 통틀어 18경기에서 23골을 넣었다.
+
+부상으로 잠시 휴식을 취하기도 했지만 그의 페이스는 폭발적이었다. 하지만 그는 '강제' 휴식기를 맞게 됐다. 
+
+2022년 카타르월드컵이 열리는 기간은 쉬어야 한다. 노르웨이가 월드컵 본선의 문을 넘지 못했기 때문이다.</p>
+	</div>
+</body>
+</html>
