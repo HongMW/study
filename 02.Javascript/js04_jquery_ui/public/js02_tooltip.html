@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Tooltip - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/start/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+     $(function(){
+        $('#button').hover(
+           function(){$(this).addClass('ui-state-hover')},
+           function(){$(this).removeClass('ui-state-hover')}
+        );
+        $('#button').click(function(){
+           $(this).toggleClass('ui-state-active');
+        })
+        $('h1').hover(
+           function(){$(this).addClass('ui-state-hover');},
+           function(){$(this).removeClass('ui-state-hover');}
+        )
+     });
+  </script>
+  <style>
+     h1{text-align:center;}
+     #button{padding:5px; margin:0; text-align:center;}
+  </style>
+</head>
+<body>
+   <!-- div#button.box.ui-state-default.ui-coner-all>p -->
+   <div id="button" class="box ui-state-default ui-coner-all"> <!-- 이 클래스명을 가지고 있으면 링크 스타일시트에  -->
+      <p>1. 불충분 내용 - 등록된 내용이 불충분하여 정확한 판단이 불가능함 (영문 알파벳, 의미없는 단어 등)
+2. 잘못된 정보 - 정확하지 않거나 올바르지 않은 정보의 등록으로 타 사용자에게 혼란을 줌
+3. 타인의 신상 - 당사자의 동의 없이 타인의 개인정보를 기재 (택배 기사, 스토커, 모르는 사람 등)
+4. 욕설의 포함 - 타인에게 공포심, 불안감, 불쾌감, 모욕감 등을 유발하는 욕설의 포함
+5. 이외의 사유 - 위의 열거된 사항 이외에 타인에게 피해를 줄만한 내용의 기재 (영문 스팸 댓글 등)</p>
+   </div>
+   <!-- h1.box.ui-state-default.ui-coner-all{button} -->
+   <h1 class="box ui-state-default ui-coner-all">button</h1>
+</body>
+</html>
